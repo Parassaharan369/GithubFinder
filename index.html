@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:regular,italic,700,700italic" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/ff348a1e65.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <nav class="navbar">
+            <div id="app-name">
+                <h1>DevFinder</h1>
+            </div>
+            <div id="mode">Dark <i class="fa fa-moon"></i></div>
+        </nav>
+        <form id="searchbar-form" onsubmit="submitUN(event)">
+            <div class="searchbar">
+                <div id="searcharea">
+
+                    <label for="username"><i style="color: rgba(28, 107, 255, 0.81);"
+                            class="fa fa-sharp fa-light fa-search"></i></label>
+                    <input type="text" name="username" id="username" placeholder="Search Github username...">
+                </div>
+                <div id="user-not-found">No Results</div>
+                <button type="submit">Search</button>
+            </div>
+        </form>
+
+        <div class="profile-area">
+            <div id="profile-dp-username">
+                <div id="profile-dp"><img src="" alt=""></div>
+                <div id="profile-sec1">
+                    <div id="p-username">
+                        <h2>Name</h2>
+                        <p>@username</p>
+                    </div>
+                    <div id="p-joindate">
+
+                        Joined 30 12 2000
+
+                    </div>
+
+                </div>
+            </div>
+            <div id="profile-content">
+
+                <div id="profile-sec2">
+                    <div id="p-bio">
+                        <p>User bio....</p>
+                    </div>
+                    <div id="p-stats">
+                        <div id="repos">
+                            <p>Repos</p>
+                            <h2>0</h2>
+                        </div>
+                        <div id="followers">
+                            <p>Followers</p>
+                            <h2>0</h2>
+                        </div>
+                        <div id="following">
+                            <p>Following</p>
+                            <h2>0</h2>
+                        </div>
+                    </div>
+                    <div id="p-links">
+                        <div class="p-link-ele" id="p-link-ele1" ><i class="fa fa-map-marker" aria-hidden="true"></i> Location</div>
+                        <div class="p-link-ele" id="p-link-ele2"><a href="" class="p-link-ele"><i class="fa fa-twitter"></i> Twitter </a></div>
+                        <div class="p-link-ele" id="p-link-ele3"><a href="" class="p-link-ele"> <i class="fa fa-link"></i> User-Site </a></div>
+                        <div class="p-link-ele" id="p-link-ele4"><a href="" class="p-link-ele"> <i class="fa fa-solid fa-building"></i> org </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/ff348a1e65.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/ff348a1e65.js" crossorigin="anonymous"></script> -->
+    <script src="app.js"></script>
+</body>
+
+</html>
