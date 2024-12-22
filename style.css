@@ -1,0 +1,371 @@
+
+* {
+
+    transition: all 0.3s ease-in-out;
+    /* transition: color 0.2s ease-in-out; */
+
+    font-family: 'Space Mono', monospace;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(30deg, #f1ddff, #e5d0ed, #afd3fc, #d2beed);
+    background-size: 500%;
+    background-position: left;
+    background-attachment: fixed;
+    animation-name: colormovinganimation;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-direction: alternate-reverse;
+  }
+  @keyframes colormovinganimation {
+    0% {
+      background-position:left;
+    }
+    33% {
+      background-position: right;
+    }
+    /* 66%{
+        background-position: top;
+    } */
+    100%{
+        background-position: top;
+    }
+  }
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e7eaff;
+}
+#container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+}
+@media only screen and (max-width: 780px){
+    #container{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+    }
+    
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: azure; */
+    padding: 10px;
+    margin-bottom:1em ;
+    border-radius: 1em;
+}
+#app-name{
+    font-size: 1.3em;
+    font-weight: 500;
+}
+#app-name h1{
+    color:black;
+}
+#mode{
+    margin-top:auto;
+    font-weight: 400;
+    color: rgb(105, 105, 105);
+    padding: 4px;
+    border-radius:0.6em ;
+}
+#mode:hover{
+    background-color: rgba(86, 86, 250, 0.118);
+    color: rgb(75, 75, 75);
+
+    cursor: pointer;
+
+}
+#searchbar-form{
+    width: 100%;
+}
+.searchbar{
+    flex:1;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    margin: 10px 0 10px 0;
+    padding: 5px;
+    border-radius:1em ;
+    box-shadow: 2px 2px 10px  grey;
+
+
+}
+#searcharea{
+    margin: 5px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#searcharea input{
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 800;
+    margin-left: 10px;
+    width: 90%;
+    height: auto;
+    color:black;
+}
+.hideNotFindMsg{
+    display: none;
+}
+#user-not-found{
+    margin: 10px;
+    margin-left:30px ;
+    color: red;
+    font-size: 12px;
+    font-weight: 700;
+    /* display: none; */
+    /* display: flex; */
+}
+
+
+.searchbar button{
+    margin: 4px;
+    border-radius: 0.7em;
+    background-color:#0179ff;
+    border:none;
+    font-weight: 700;
+    padding: 0.8em;
+    color: white;
+}
+
+
+.profile-area{
+    display: flex;
+    /* align-items: flex-end; */
+    flex-direction:column ;
+    width: 100%;
+    min-height:300px ;
+    background-color: white;
+    margin: 10px 0 10px 0;
+    padding: 36px;
+    border-radius:1em ;
+    box-shadow: 2px 2px 10px  grey;
+}
+@media only screen and (max-width: 984px){
+    .profile-area{
+        padding:20px;
+    }
+}
+#profile-dp-username{
+
+    display: flex;
+    width: 100%;
+    
+}
+
+#profile-dp{
+    background-color: #ffffff;
+    margin-right: 40px;
+    /* margin-left:10px ; */
+    border-radius: 50%;
+    height: 6em;
+    width: 6em;
+}
+#profile-dp img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    height: 6em;
+    width: 6em;
+}
+#p-username h2{
+    color: black;
+}
+
+
+#profile-content{
+    display: flex;
+    flex-direction: column;
+    padding-left:8.5em ;
+    width: 100%;
+}
+@media only screen and (max-width: 984px){
+    #profile-content{
+        padding-left: 0;
+    }
+}
+
+#profile-sec1{
+    flex: 1;
+    display: flex;
+    justify-content:space-between;
+    /* align-items: center; */
+
+    margin-bottom:20px ;
+    /* background-color: bisque; */
+}
+#p-username{
+    margin-bottom: 10px;
+}
+#p-username h2{
+    font-size: 1.6em;
+    color: black;
+}
+#p-username p{
+    color: rgb(79, 135, 255);
+    font-size: 17px;
+}
+#p-joindate{
+    color: rgb(120, 120, 120);
+    font-weight: 500;
+}
+@media only screen and (max-width: 984px){
+    #profile-sec1{
+        display: flex;
+        /* justify-content:space-between; */
+        /* align-items: center; */
+        flex-direction: column;
+        /* width: 100%; */
+        margin-bottom:30px ;
+        /* background-color: bisque; */
+    }
+} 
+@media only screen and (max-width: 780px){
+    #profile-dp{
+        height: 5.5em;
+        width: 5.5em;
+    }
+    #p-username h2{
+        font-size: 1.4em;
+    }
+
+}
+
+#profile-sec2{
+    display: flex;
+    flex-direction: column;
+
+}
+#p-bio{
+    margin:10px 0 30px 0;
+    font-weight: 500;
+    color: black;
+}
+#p-stats{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ebeeff;
+    width: 100%;
+    min-height: 75px;
+    border-radius:1em ;
+    padding: 20px;
+    margin-bottom:30px ;
+}
+#p-stats p{
+    color: grey;
+    font-size: 0.89em;
+}
+#p-stats h2{
+    color: black;
+
+}
+
+#p-links {
+    display: grid;
+    justify-content: space-between;
+    align-items: flex-start;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 18px;
+    row-gap: 18px;
+}
+.p-link-ele{
+    color: rgb(88, 88, 88);
+}
+
+
+@media screen and (max-width: 780px){
+    #p-links {
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+    }
+}
+
+/* Dark mode */
+body[class=darkmode]{
+    background: #141d2f;
+    color:white;
+
+}
+body[class=darkmode] .navbar #app-name h1{
+    color:white;
+}
+body[class=darkmode] .navbar #mode{
+    color: rgb(229, 229, 229);
+}
+body[class=darkmode] .searchbar {
+    background-color:#1f2a47;
+    box-shadow:none;
+}
+body[class=darkmode] #searcharea input{
+    background-color:#1f2a47;
+    color:white;
+}
+body[class=darkmode] #searcharea input::placeholder{
+    color:#eef2feaa;
+}
+body[class=darkmode] .profile-area{
+    background-color:#1f2a47;
+    box-shadow:none;
+}
+body[class=darkmode] #p-username h2{
+    /* font-size: 2em; */
+    color: white;
+}
+body[class=darkmode] #p-joindate{
+    color:white;
+}
+body[class=darkmode] #p-bio p{
+
+    color: white;
+}
+body[class=darkmode] #p-stats{
+    background-color: #141d2f;
+}
+body[class=darkmode] h2{
+    color:white;
+}
+body[class=darkmode] #p-stats p{
+    color: rgb(255, 255, 255);
+
+}
+body[class=darkmode] #p-stats h2{
+    color: rgb(255, 255, 255);
+
+}
+
+body[class=darkmode] .p-link-ele{
+    color: rgb(255, 255, 255);
+}
+
+
+.opacity-50{
+    opacity: 50%;
+}
+.opacity-75{
+    opacity: 75%;
+}
